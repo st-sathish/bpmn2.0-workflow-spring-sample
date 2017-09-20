@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.capestart</groupId>
+  <artifactId>bpmn-leave-app-workflow-sample</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+  	<activiti.version>6.0.0</activiti.version>
+  	<spring.security.version>4.0.3.RELEASE</spring.security.version>
+  	<spring.version>4.2.4.RELEASE</spring.version>
+  	<java.version>1.8</java.version>
+  	<jstl.version>1.2</jstl.version>
+  	<servlet.version>3.0.1</servlet.version>
+  </properties>
+
+  <dependencies>
+  
+  		<!-- Spring config -->
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-core</artifactId>
+  			<version>${spring.version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-web</artifactId>
+  			<version>${spring.version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-webmvc</artifactId>
+  			<version>${spring.version}</version>
+  		</dependency>
+  		
+  		<!-- activiti workflow engine -->
+  		<dependency>
+  			<groupId>org.activiti</groupId>
+    		<artifactId>activiti-engine</artifactId>
+    		<version>${activiti.version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.activiti</groupId>
+    		<artifactId>activiti-spring</artifactId>
+    		<version>${activiti.version}</version>
+  		</dependency>
+  		
+  		<!-- spring security config -->
+  		<dependency>
+  			<groupId>org.springframework.security</groupId>
+  			<artifactId>spring-security-web</artifactId>
+  			<version>${spring.security.version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework.security</groupId>
+  			<artifactId>spring-security-config</artifactId>
+  			<version>${spring.security.version}</version>
+  		</dependency>
+  		
+  		<!-- jstl -->
+  		<dependency>
+    		<groupId>jstl</groupId>
+    		<artifactId>jstl</artifactId>
+    		<version>${jstl.version}</version>
+		</dependency>
+		
+		<!-- servlet api -->
+		<dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>javax.servlet-api</artifactId>
+	        <version>${servlet.version}</version>
+	        <scope>provided</scope>
+		</dependency>
+  </dependencies>
+  
+  <repositories>
+  		<repository>
+  			<id>activiti-spring</id>
+  			<url>https://mvnrepository.com/artifact/org.activiti/activiti-spring</url>
+  		</repository>
+  </repositories>
+</project>
